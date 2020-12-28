@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Support Dashboard</title>
+</head>
+
+<body>
+    <!-- header-bar -->
+    <header>
+        <section class="header-sec container">
+            <div class="head-row row justify-content-between">
+                <div class="logo-container col-sm-2">
+                    <a href="index.html"><img src="images/Logo.png" alt=""></a>
+                </div>
+                <div class="head-searchbar col-sm-5 d-flex">
+                    <input type="text" class="form-control" placeholder="Search...">
+                    <button class="btn-headsearch"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="head-user-area col-sm-2 d-flex justify-content-between">
+                    <button class="btn-signin" data-toggle="modal" data-target="#signinmodal"><a href="#">Sign In</a></button>
+                    <div class="modal fade" id="signinmodal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <div class="modal-row d-flex justify-content-between">
+                                        <div class="bg-white w70 modal-col-1">
+                                            <div class="modal-inp-row">
+                                                <input type="email" placeholder="Username or Email Address" class="modal-inp-1">
+                                                <input type="password" placeholder="Password" class="modal-inp-2">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck1" checked="">
+                                                    <label class="custom-control-label" for="customCheck1">Remember me</label>
+                                                </div>
+                                                <a href="#" class="d-block text-orange sign-in-btn">Sign In</a>
+                                                <a href="#" class="los-pswrd d-inline-block text-gray">Lost Your Password?</a>
+                                            </div>
+                                        </div>
+                                        <div class="w30 modal-col-2">
+                                            <img src="images/pop-up-img.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>|</p>
+                    <div class="dropdown">
+                        <button type="button" class="btn-register dropdown-toggle" data-toggle="dropdown">
+                         <a href="#"> Register </a>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#regmodal">Free</a>
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#regmodal">Membership</a>
+                        </div>
+                        <div class="modal fade" id="regmodal">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                        <div class="modal-row d-flex justify-content-between">
+                                            <div class="bg-white w70 modal-col-1">
+                                                <div class="modal-inp-row">
+                                                    <input type="email" placeholder="Username or Email Address" class="modal-inp-1">
+                                                    <input type="password" placeholder="Password" class="modal-inp-2">
+                                                    <input type="password" placeholder="Confirm Password" class="modal-inp-3">
+                                                    <a href="#" class="d-block text-orange sign-in-btn reg-btn">Create Account</a>
+                                                    <p href="#" class="arlready-account text-center">Already have an account? <span class="d-inline-block"><a href="#" class="text-orange" data-toggle="modal" data-target="#signinmodal"> Login!</a></span></p>
+                                                </div>
+                                            </div>
+                                            <div class="w30 modal-col-2">
+                                                <img src="images/pop-up-img.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <!-- Navigation -->
+    <section class="banner-section dashboard-banner">
+        <div class="container">
+            <div class="navigation">
+                <nav class="navbar navbar-expand-xl navbar-light">
+
+                    <!-- Toggler/collapsibe Button -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <div class="nav-togle top"></div>
+                        <div class="nav-togle middle"></div>
+                        <div class="nav-togle bottom"></div>
+            </button>
+
+                    <!-- Navbar links -->
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Browse Categories
+                    </a>
+                                <ul class="dropdown-menu">
+                                    <li><a tabindex="-1" href="#">Full Directory</a></li>
+                                    <li class="dropdown-submenu dropdown-submenu-1">
+                                        <a class="test" tabindex="-1" href="#">
+                                            Guns & Firearms
+                                            <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-1">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-2">
+                                        <a class="test" tabindex="-1" href="#">
+                                            Gun Parts
+                                            <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-2">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-3">
+                                        <a class="test" tabindex="-1" href="#">
+                                            Scopes, Sights & Optics
+                                            <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-3">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-4">
+                                        <a class="test" tabindex="-1" href="#">
+                                            Full Directory
+                                            <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-4">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-5">
+                                        <a class="test" tabindex="-1" href="#">
+                                            Guns & Firearms
+                                            <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-5">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-6">
+                                        <a class="test" tabindex="-1" href="#">
+                                            Gun Parts
+                                            <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-6">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-7">
+                                        <a class="test" tabindex="-1" href="#">
+                                            Scopes, Sights & Optics
+                                            <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-7">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-8">
+                                        <a class="test" tabindex="-1" href="#">
+                                            Full Directory
+                                            <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-8">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-9">
+                                        <a class="test" tabindex="-1" href="#">
+                                            Guns & Firearms
+                                            <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-9">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-10">
+                                        <a class="test" tabindex="-1" href="#">
+                                            Gun Parts
+                                            <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-10">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-11">
+                                        <a class="test" tabindex="-1" href="#">
+                                            Scopes, Sights & Optics
+                                            <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-11">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-12">
+                                        <a class="test" tabindex="-1" href="#">
+                                            Full Directory
+                                            <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-12">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-13">
+                                        <a class="test" tabindex="-1" href="#">
+                                            Guns & Firearms
+                                            <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-13">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-14">
+                                        <a class="test" tabindex="-1" href="#">
+                                            Gun Parts
+                                            <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-14">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-15">
+                                        <a class="test" tabindex="-1" href="#">
+                                            Scopes, Sights & Optics
+                                            <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-15">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-16">
+                                        <a class="test" tabindex="-1" href="#">
+                                            Fishing Tackle
+                                            <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-16">
+                                            <li><a tabindex="-1" href="#">All Fishing Tackle</a></li>
+                                            <li class="dropdown-submenu dropdown-submenu-17">
+                                                <a class="test" tabindex="-1" href="#">
+                                                    Fly Fishing Tackle
+                                                    <span><i class="fas fa-caret-right"></i></span></a>
+                                                <ul class="drop-submenu-17">
+                                                    <li><a tabindex="-1" href="#">All Fishing Tackle</a></li>
+                                                    <li><a tabindex="-1" href="#">Fly Fishing Flies</a></li>
+                                                    <li><a tabindex="-1" href="#">All Fishing Tackle</a></li>
+                                                    <li><a tabindex="-1" href="#">Fly Fishing Rod & Reel Combos</a></li>
+                                                    <li><a tabindex="-1" href="#">Fly Fishing Flies</a></li>
+                                                    <li><a tabindex="-1" href="#">All Fishing Tackle</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown-submenu dropdown-submenu-18">
+                                                <a class="test" tabindex="-1" href="#">
+                                                    Freshwater Fishing Tackle
+                                                    <span><i class="fas fa-caret-right"></i></span></a>
+                                                <ul class="drop-submenu-18">
+                                                    <li><a tabindex="-1" href="#">All Fishing Tackle</a></li>
+                                                    <li><a tabindex="-1" href="#">Fly Fishing Flies</a></li>
+                                                    <li><a tabindex="-1" href="#">All Fishing Tackle</a></li>
+                                                    <li><a tabindex="-1" href="#">Fly Fishing Rod & Reel Combos</a></li>
+                                                    <li><a tabindex="-1" href="#">Fly Fishing Flies</a></li>
+                                                    <li><a tabindex="-1" href="#">All Fishing Tackle</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown-submenu dropdown-submenu-19">
+                                                <a class="test" tabindex="-1" href="#">
+                                                    All Fishing Tackle
+                                                    <span><i class="fas fa-caret-right"></i></span></a>
+                                                <ul class="drop-submenu-19">
+                                                    <li><a tabindex="-1" href="#">All Fishing Tackle</a></li>
+                                                    <li><a tabindex="-1" href="#">Fly Fishing Flies</a></li>
+                                                    <li><a tabindex="-1" href="#">All Fishing Tackle</a></li>
+                                                    <li><a tabindex="-1" href="#">Fly Fishing Rod & Reel Combos</a></li>
+                                                    <li><a tabindex="-1" href="#">Fly Fishing Flies</a></li>
+                                                    <li><a tabindex="-1" href="#">All Fishing Tackle</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a tabindex="-1" href="#">Fly Fishing Tackle</a></li>
+                                            <li><a tabindex="-1" href="#">Fresh Water Fishing Tackle</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-20">
+                                        <a class="test" tabindex="-1" href="#">
+                                            Gun Parts
+                                            <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-20">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-21">
+                                        <a class="test" tabindex="-1" href="#">
+                                            Scopes, Sights & Optics
+                                            <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-21">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-22">
+                                        <a class="test" tabindex="-1" href="#">
+                                            Full Directory
+                                            <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-22">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-23">
+                                        <a class="test" tabindex="-1" href="#">
+                                            Guns & Firearms
+                                            <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-23">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-24">
+                                        <a class="test" tabindex="-1" href="#">
+                                            Gun Parts
+                                            <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-24">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a tabindex="-1" href="#">Scopes, Sights & Optics</a></li>
+                                    <li><a tabindex="-1" href="#">Full Directory</a></li>
+                                    <li><a tabindex="-1" href="#">Guns & Firearms</a></li>
+                                    <li><a tabindex="-1" href="#">Gun Parts</a></li>
+                                    <li><a tabindex="-1" href="#">Scopes, Sights & Optics</a></li>
+                                    <li><a tabindex="-1" href="#">Full Directory</a></li>
+                                    <li><a tabindex="-1" href="#">Guns & Firearms</a></li>
+                                    <li><a tabindex="-1" href="#">Gun Parts</a></li>
+                                    <li><a tabindex="-1" href="#">Scopes, Sights & Optics</a></li>
+                                    <li><a tabindex="-1" href="#">Full Directory</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Buying.html" target="_blank">Buy</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" target="_blank">Sell</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Coupon Center.html" target="_blank">Coupons</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Deals.html" target="_blank">Deals</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Gun Article.html" target="_blank">Articles</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Gun Video.html" target="_blank">Videos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" target="_blank">Help</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <!-- Dashboard Section -->
+            <section class="dashboard-sec bg-white">
+                <div class="dashboard-content d-flex justify-content-between">
+                    <div class="nav-dashboard">
+                        <!-- Nav pills -->
+                        <ul class="nav nav-tabs flex-column dash-nav" role="tablist">
+                            <div class="dash-nav-col-1">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="pill" href="#dashboard"><span><img src="images/dashboard.png" alt=""></span> Dashboard</a>
+                                </li>
+                                <li class="nav-item">
+                                    <div id="accordion">
+                                        <div class="buy-btn-acor-row d-flex justify-content-between">
+                                            <div class="buy-btn-acor-col-1 buy-btn-acor-col">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <a class="card-link" data-toggle="collapse" href="#collapseOne"><span><img src="images/shopping-cart.png" alt=""></span> Buy</a>
+                                                    </div>
+                                                    <div id="collapseOne" class="collapse" data-parent="#accordion">
+                                                        <div class="card-body">
+                                                            <ul class="nav nav-tabs nav-buy flex-column" role="tablist">
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" data-toggle="pill" href="#watchlist">Watchlist</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" data-toggle="pill" href="#bidding">Bidding On</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" data-toggle="pill" href="#offers">Offers Made</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" data-toggle="pill" href="#wonitem">Won Items</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" data-toggle="pill" href="#wonorder">Won Orders</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" data-toggle="pill" href="#lostauction">Lost Auctions</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Tab panes -->
+                                            <!-- <div class="buy-btn-acor-col-2 buy-btn-acor-col">
+                                                <div class="tab-content tab-content-buy">
+                                                    <div id="watchlist" class="container tab-pane"><br>
+                                                        <h3>Notice</h3>
+                                                        <div class="buy-tab-p">
+                                                            <p>Your are located in a country outside the United State. Please <a href="#"> Contact customer support.</a> to activity your account,
+                                                                <a href="#"> click here to contact Customer Support.</a></p>
+                                                        </div>
+                                                    </div>
+                                                    <div id="bidding" class="container tab-pane fade"><br>
+                                                        <h3>Notice</h3>
+                                                        <div class="buy-tab-p">
+                                                            <p>Your are located in a country outside the United State. Please <a href="#"> Contact customer support.</a> to activity your account,
+                                                                <a href="#"> click here to contact Customer Support.</a></p>
+                                                        </div>
+                                                    </div>
+                                                    <div id="offers" class="container tab-pane fade"><br>
+                                                        <h3>Notice</h3>
+                                                        <div class="buy-tab-p">
+                                                            <p>Your are located in a country outside the United State. Please <a href="#"> Contact customer support.</a> to activity your account,
+                                                                <a href="#"> click here to contact Customer Support.</a></p>
+                                                        </div>
+                                                    </div>
+                                                    <div id="wonitem" class="container tab-pane fade"><br>
+                                                        <h3>Notice</h3>
+                                                        <div class="buy-tab-p">
+                                                            <p>Your are located in a country outside the United State. Please <a href="#"> Contact customer support.</a> to activity your account,
+                                                                <a href="#"> click here to contact Customer Support.</a></p>
+                                                        </div>
+                                                    </div>
+                                                    <div id="wonorder" class="container tab-pane fade"><br>
+                                                        <h3>Notice</h3>
+                                                        <div class="buy-tab-p">
+                                                            <p>Your are located in a country outside the United State. Please <a href="#"> Contact customer support.</a> to activity your account,
+                                                                <a href="#"> click here to contact Customer Support.</a></p>
+                                                        </div>
+                                                    </div>
+                                                    <div id="offers" class="container tab-pane fade"><br>
+                                                        <h3>Notice</h3>
+                                                        <div class="buy-tab-p">
+                                                            <p>Your are located in a country outside the United State. Please <a href="#"> Contact customer support.</a> to activity your account,
+                                                                <a href="#"> click here to contact Customer Support.</a></p>
+                                                        </div>
+                                                    </div>
+                                                    <div id="wonitem" class="container tab-pane fade"><br>
+                                                        <h3>Notice</h3>
+                                                        <div class="buy-tab-p">
+                                                            <p>Your are located in a country outside the United State. Please <a href="#"> Contact customer support.</a> to activity your account,
+                                                                <a href="#"> click here to contact Customer Support.</a></p>
+                                                        </div>
+                                                    </div>
+                                                    <div id="wonorder" class="container tab-pane fade"><br>
+                                                        <h3>Notice</h3>
+                                                        <div class="buy-tab-p">
+                                                            <p>Your are located in a country outside the United State. Please <a href="#"> Contact customer support.</a> to activity your account,
+                                                                <a href="#"> click here to contact Customer Support.</a></p>
+                                                        </div>
+                                                    </div>
+                                                    <div id="lostauction" class="container tab-pane fade"><br>
+                                                        <h3>Notice</h3>
+                                                        <div class="buy-tab-p">
+                                                            <p>Your are located in a country outside the United State. Please <a href="#"> Contact customer support.</a> to activity your account,
+                                                                <a href="#"> click here to contact Customer Support.</a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="pill" href="#sell"><span><img src="images/Sell.png" alt=""></span> Sell</a>
+                                </li>
+                            </div>
+                            <div class="dash-nav-col-1 dash-nav-col-2">
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="pill" href="#savesearch"><span><img src="images/save-searc.png" alt=""></span> Saved Searches</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="pill" href="#shipping"><span><img src="images/shipping.png" alt=""></span> Shipping</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="pill" href="#toolbox"><span><img src="images/toolbox.png" alt=""></span> Toolbox</a>
+                                </li>
+                            </div>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#account"><span><img src="images/account.png" alt=""></span> Account</a>
+                            </li>
+                            <li class="nav-item">
+                                <div id="accordion2">
+                                    <div class="buy-btn-acor-row support-btn-acor-row d-flex justify-content-between">
+                                        <div class="buy-btn-acor-col-1 buy-btn-acor-col support-btn-acor-col">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <a class="card-link" data-toggle="collapse" href="#collapsetwo"><span><img src="images/support.png" alt=""></span> Support</a>
+                                                </div>
+                                                <div id="collapsetwo" class="collapse" data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        <ul class="nav nav-tabs nav-buy flex-column" role="tablist">
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" data-toggle="pill" href="#supportissue">Support Issues</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" data-toggle="pill" href="#creditreq">Credit Requests</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" data-toggle="pill" href="#creditagainst">Credit Requests
+                                                                    Against Me</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" data-toggle="pill" href="#bppclaims">BPP Claims</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" data-toggle="pill" href="#bppaganist">BPP Claims Against Mes</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Tab panes -->
+                                        <!-- <div class="buy-btn-acor-col-2 buy-btn-acor-col support-btn-acor-col">
+                                            <div class="tab-content tab-content-buy tab-content-support">
+                                                <div id="supportissue" class="container tab-pane"><br>
+                                                    <h3>Support Dashboard</h3>
+                                                    <div class="dash-content support-content dash-content-col-1 col-md-12 text-center">
+                                                        <div class="support-issue-row row justify-content-between">
+                                                            <div class="support-issue-col support-issue-col-1 col-md-6 text-left">
+                                                                <h5><span><img src="images/support-clr.png" alt=""></span> Support Center</h5>
+                                                                <p>Visit the Support Center</p>
+                                                            </div>
+                                                            <div class="support-issue-col support-issue-col-2 text-right col-md-6">
+                                                                <button><a href="#">View</a></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="creditreq" class="container tab-pane fade"><br>
+                                                    <h3>Support Dashboard</h3>
+                                                    <div class="dash-content dash-content-col-1 col-md-6 mx-auto text-center">
+                                                        <a href="#">
+                                                            <img src="images/credit-card.png" alt="">
+                                                            <h6>Credit Requests Submitted</h6>
+                                                            <p>Credits your requested for items you sold</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div id="creditagainst" class="container tab-pane fade"><br>
+                                                    <h3>Support Dashboard</h3>
+                                                    <div class="dash-content dash-content-col-2 col-md-6 mx-auto text-center">
+                                                        <a href="#">
+                                                            <img src="images/credit-req.png" alt="">
+                                                            <h6>Credit Requests Against Me</h6>
+                                                            <p>Requests made by seller for items you purchased</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div id="bppclaims" class="container tab-pane fade"><br>
+                                                    <h3>Support Dashboard</h3>
+                                                    <div class="dash-content dash-content-col-2 col-md-6 mx-auto text-center">
+                                                        <a href="#">
+                                                            <img src="images/bppsubmit.png" alt="">
+                                                            <h6>BPP Claims Submitted</h6>
+                                                            <p>Buyer's Protection claims you submitted for items you purchased</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div id="bppaganist" class="container tab-pane fade"><br>
+                                                    <h3>Support Dashboard</h3>
+                                                    <div class="dash-content dash-content-col-2 col-md-6 mx-auto text-center">
+                                                        <a href="#">
+                                                            <img src="images/bpp-against.png" alt="">
+                                                            <h6>BPP Claims Against Me</h6>
+                                                            <p>Buyer's Protection claims made by buyer for items you sold</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="dashboard-tab">
+                        <div class="tab-content tab-content-main">
+                            <div id="dashboard" class="container tab-pane active">
+                                <h3>Dashboard</h3>
+                                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+
+                            <div id="watchlist" class="container tab-pane"><br>
+                                <h3>Notice</h3>
+                                <div class="buy-tab-p">
+                                    <p>Your are located in a country outside the United State. Please <a href="#"> Contact customer support.</a> to activity your account,
+                                        <a href="#"> click here to contact Customer Support.</a></p>
+                                </div>
+                            </div>
+                            <div id="bidding" class="container tab-pane fade"><br>
+                                <h3>Notice</h3>
+                                <div class="buy-tab-p">
+                                    <p>Your are located in a country outside the United State. Please <a href="#"> Contact customer support.</a> to activity your account,
+                                        <a href="#"> click here to contact Customer Support.</a></p>
+                                </div>
+                            </div>
+                            <div id="offers" class="container tab-pane fade"><br>
+                                <h3>Notice</h3>
+                                <div class="buy-tab-p">
+                                    <p>Your are located in a country outside the United State. Please <a href="#"> Contact customer support.</a> to activity your account,
+                                        <a href="#"> click here to contact Customer Support.</a></p>
+                                </div>
+                            </div>
+                            <div id="wonitem" class="container tab-pane fade"><br>
+                                <h3>Notice</h3>
+                                <div class="buy-tab-p">
+                                    <p>Your are located in a country outside the United State. Please <a href="#"> Contact customer support.</a> to activity your account,
+                                        <a href="#"> click here to contact Customer Support.</a></p>
+                                </div>
+                            </div>
+                            <div id="wonorder" class="container tab-pane fade"><br>
+                                <h3>Notice</h3>
+                                <div class="buy-tab-p">
+                                    <p>Your are located in a country outside the United State. Please <a href="#"> Contact customer support.</a> to activity your account,
+                                        <a href="#"> click here to contact Customer Support.</a></p>
+                                </div>
+                            </div>
+                            <div id="offers" class="container tab-pane fade"><br>
+                                <h3>Notice</h3>
+                                <div class="buy-tab-p">
+                                    <p>Your are located in a country outside the United State. Please <a href="#"> Contact customer support.</a> to activity your account,
+                                        <a href="#"> click here to contact Customer Support.</a></p>
+                                </div>
+                            </div>
+                            <div id="wonitem" class="container tab-pane fade"><br>
+                                <h3>Notice</h3>
+                                <div class="buy-tab-p">
+                                    <p>Your are located in a country outside the United State. Please <a href="#"> Contact customer support.</a> to activity your account,
+                                        <a href="#"> click here to contact Customer Support.</a></p>
+                                </div>
+                            </div>
+                            <div id="wonorder" class="container tab-pane fade"><br>
+                                <h3>Notice</h3>
+                                <div class="buy-tab-p">
+                                    <p>Your are located in a country outside the United State. Please <a href="#"> Contact customer support.</a> to activity your account,
+                                        <a href="#"> click here to contact Customer Support.</a></p>
+                                </div>
+                            </div>
+                            <div id="lostauction" class="container tab-pane fade"><br>
+                                <h3>Notice</h3>
+                                <div class="buy-tab-p">
+                                    <p>Your are located in a country outside the United State. Please <a href="#"> Contact customer support.</a> to activity your account,
+                                        <a href="#"> click here to contact Customer Support.</a></p>
+                                </div>
+                            </div>
+                            <div id="sell" class="container tab-pane fade">
+                                <h3>Sell</h3>
+                                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                            <div id="savesearch" class="container tab-pane fade">
+                                <h3>Saved Searches</h3>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                            </div>
+                            <div id="shipping" class="container tab-pane fade">
+                                <h3>Shipping</h3>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                            </div>
+                            <div id="toolbox" class="container tab-pane fade">
+                                <h3>Tool Box</h3>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                            </div>
+                            <div id="account" class="container tab-pane fade">
+                                <h3>Account</h3>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                            </div>
+                            <div id="supportissue" class="container tab-pane"><br>
+                                <h3>Support Dashboard</h3>
+                                <div class="dash-content support-content dash-content-col-1 col-md-12 text-center">
+                                    <div class="support-issue-row row justify-content-between">
+                                        <div class="support-issue-col support-issue-col-1 col-md-6 text-left">
+                                            <h5><span><img src="images/support-clr.png" alt=""></span> Support Center</h5>
+                                            <p>Visit the Support Center</p>
+                                        </div>
+                                        <div class="support-issue-col support-issue-col-2 text-right col-md-6">
+                                            <button><a href="#">View</a></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="creditreq" class="container tab-pane fade"><br>
+                                <h3>Support Dashboard</h3>
+                                <div class="dash-content dash-content-col-1 col-md-6 mx-auto text-center">
+                                    <a href="#">
+                                        <img src="images/credit-card.png" alt="">
+                                        <h6>Credit Requests Submitted</h6>
+                                        <p>Credits your requested for items you sold</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="creditagainst" class="container tab-pane fade"><br>
+                                <h3>Support Dashboard</h3>
+                                <div class="dash-content dash-content-col-2 col-md-6 mx-auto text-center">
+                                    <a href="#">
+                                        <img src="images/credit-req.png" alt="">
+                                        <h6>Credit Requests Against Me</h6>
+                                        <p>Requests made by seller for items you purchased</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="bppclaims" class="container tab-pane fade"><br>
+                                <h3>Support Dashboard</h3>
+                                <div class="dash-content dash-content-col-2 col-md-6 mx-auto text-center">
+                                    <a href="#">
+                                        <img src="images/bppsubmit.png" alt="">
+                                        <h6>BPP Claims Submitted</h6>
+                                        <p>Buyer's Protection claims you submitted for items you purchased</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="bppaganist" class="container tab-pane fade"><br>
+                                <h3>Support Dashboard</h3>
+                                <div class="dash-content dash-content-col-2 col-md-6 mx-auto text-center">
+                                    <a href="#">
+                                        <img src="images/bpp-against.png" alt="">
+                                        <h6>BPP Claims Against Me</h6>
+                                        <p>Buyer's Protection claims made by buyer for items you sold</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+    <footer>
+        <section class="footer">
+            <div class="footer-container container">
+                <div class="footer-content">
+                    <div class="footer-row d-flex justify-content-between">
+                        <div class="footer-sec-1 footer-sec">
+                            <h5>HELP</h5>
+                            <ul>
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Register</a></li>
+                                <li><a href="Site Map.html">Site Map</a></li>
+                                <li><a href="Dashboard.html" target="_blank">Support Page</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-sec-2 footer-sec">
+                            <h5>BUYERS</h5>
+                            <ul>
+                                <li><a href="#">Tools for Buyers</a></li>
+                                <li><a href="#">New Buyers</a></li>
+                                <li><a href="#">How To Buy</a></li>
+                                <li><a href="#">Buyer's Protection</a></li>
+                                <li><a href="#">Find An FFL</a></li>
+                                <li><a href="#">GunBroker.com Pricing Report</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-sec-3 footer-sec">
+                            <h5>SELLERS</h5>
+                            <ul>
+                                <li><a href="#">Tools for Sellers</a></li>
+                                <li><a href="#">New Sellers</a></li>
+                                <li><a href="#">How To Sell</a></li>
+                                <li><a href="#">Fees & Services</a></li>
+                                <li><a href="#">Join our FFL Network</a></li>
+                                <li><a href="#">FFL/Dealer Services</a></li>
+                                <li><a href="#">Dealer Store</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-sec-4 footer-sec">
+                            <h5>RELATED SITES</h5>
+                            <ul>
+                                <li><a href="#">ATF FFL EZ Check</a></li>
+                                <li><a href="#">FFL Unleashed</a></li>
+                                <li><a href="#">Forums</a></li>
+                                <li><a href="#">GetZone</a></li>
+                                <li><a href="#">Gun Genius</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-sec-5 footer-sec">
+                            <h5>AREAS OF INTEREST</h5>
+                            <ul>
+                                <li><a href="#">The GunBroker Store</a></li>
+                                <li><a href="Gun Article.html" target="_blank">Articles</a></li>
+                                <li><a href="#">Deals</a></li>
+                                <li><a href="#">Firearm Industry News</a></li>
+                                <li><a href="Deals.html" target="_blank">Gold Deals</a></li>
+                                <li><a href="#">Gold Membership</a></li>
+                                <li><a href="Gun Video.html" target="_blank">Videos</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-sec-6 footer-sec">
+                            <h5>INDUSTRY RELATIONS</h5>
+                            <ul>
+                                <li><a href="#">Advertise with Us</a></li>
+                                <li><a href="#">Investor and Media Relations</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <section class="footer-bar">
+        <div class="fbar-container container">
+            <div class="fbar-row row justify-content-between">
+                <div class="col-sm-6">
+                    <p>© 1999-2020 GunBroker.com, LLC. All rights reserved worldwide. (03 6.1.26.2058)</p>
+                </div>
+                <div class="col-sm-6 made-by">
+                    <p>Made with Love at Web Care Tec.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+    <!-- <script>
+        $(document).ready(function() {
+            $('.dropdown-submenu a.test').on("click", function(e) {
+                $(this).next('ul').toggle();
+                e.stopPropagation();
+                e.preventDefault();
+            });
+        });
+    </script> -->
+    <!-- <script>
+        $(document).ready(function() {
+            $('.dropdown-submenu a.test').hover function(e) {
+                $(this).next('ul').toggle();
+                e.stopPropagation();
+                e.preventDefault();
+            });
+        });
+    </script> -->
+    <!-- <script>
+        $(document).ready(function() {
+            $(".dropdown-submenu a.test").click(function() {
+                $(".dropdown-menu").removeProp("block");
+            });
+        });
+    </script> -->
+    <script>
+        $(document).ready(function() {
+            $(".nav-tabs .nav-item .nav-link").click(function() {
+                $(".nav-link").removeClass("active");
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Gun Broker</title>
+</head>
+
+<body>
+    <!-- header-bar -->
+    <header>
+        <section class="header-sec container">
+            <div class="head-row row justify-content-between">
+                <div class="logo-container col-sm-2">
+                    <a href="index.html"><img src="images/Logo.png" alt=""></a>
+                </div>
+                <div class="head-searchbar col-sm-5 d-flex">
+                    <input type="text" class="form-control" placeholder="Search...">
+                    <button class="btn-headsearch"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="head-user-area col-sm-2 d-flex justify-content-between">
+                    <button class="btn-signin" data-toggle="modal" data-target="#signinmodal"><a href="#">Sign In</a></button>
+                    <div class="modal fade" id="signinmodal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <div class="modal-row d-flex justify-content-between">
+                                        <div class="bg-white w70 modal-col-1">
+                                            <div class="modal-inp-row">
+                                                <input type="email" placeholder="Username or Email Address" class="modal-inp-1">
+                                                <input type="password" placeholder="Password" class="modal-inp-2">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck1" checked="">
+                                                    <label class="custom-control-label" for="customCheck1">Remember me</label>
+                                                </div>
+                                                <a href="#" class="d-block text-orange sign-in-btn">Sign In</a>
+                                                <a href="#" class="los-pswrd d-inline-block text-gray">Lost Your Password?</a>
+                                            </div>
+                                        </div>
+                                        <div class="w30 modal-col-2">
+                                            <img src="images/pop-up-img.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>|</p>
+                    <div class="dropdown">
+                        <button type="button" class="btn-register dropdown-toggle" data-toggle="dropdown">
+                         <a href="#"> Register </a>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#regmodal">Free</a>
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#regmodal">Membership</a>
+                        </div>
+                        <div class="modal fade" id="regmodal">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                        <div class="modal-row d-flex justify-content-between">
+                                            <div class="bg-white w70 modal-col-1">
+                                                <div class="modal-inp-row">
+                                                    <input type="email" placeholder="Username or Email Address" class="modal-inp-1">
+                                                    <input type="password" placeholder="Password" class="modal-inp-2">
+                                                    <input type="password" placeholder="Confirm Password" class="modal-inp-3">
+                                                    <a href="#" class="d-block text-orange sign-in-btn reg-btn">Create Account</a>
+                                                    <p href="#" class="arlready-account text-center">Already have an account? <span class="d-inline-block"><a href="#" class="text-orange" data-toggle="modal" data-target="#signinmodal"> Login!</a></span></p>
+                                                </div>
+                                            </div>
+                                            <div class="w30 modal-col-2">
+                                                <img src="images/pop-up-img.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <!-- Navigation -->
+    <section class="banner-section">
+        <div class="container">
+            <div class="navigation">
+                <nav class="navbar navbar-expand-xl navbar-light">
+
+                    <!-- Toggler/collapsibe Button -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <div class="nav-togle top"></div>
+                        <div class="nav-togle middle"></div>
+                        <div class="nav-togle bottom"></div>
+            </button>
+
+                    <!-- Navbar links -->
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Browse Categories
+                    </a>
+                                <ul class="dropdown-menu">
+                                    <li><a tabindex="-1" href="#">Full Directory</a></li>
+                                    <li class="dropdown-submenu dropdown-submenu-1">
+                                        <a class="test" tabindex="-1" href="#">
+                                Guns & Firearms
+                                <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-1">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-2">
+                                        <a class="test" tabindex="-1" href="#">
+                                Gun Parts
+                                <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-2">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-3">
+                                        <a class="test" tabindex="-1" href="#">
+                                Scopes, Sights & Optics
+                                <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-3">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-4">
+                                        <a class="test" tabindex="-1" href="#">
+                                Full Directory
+                                <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-4">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-5">
+                                        <a class="test" tabindex="-1" href="#">
+                                Guns & Firearms
+                                <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-5">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-6">
+                                        <a class="test" tabindex="-1" href="#">
+                                Gun Parts
+                                <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-6">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-7">
+                                        <a class="test" tabindex="-1" href="#">
+                                Scopes, Sights & Optics
+                                <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-7">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-8">
+                                        <a class="test" tabindex="-1" href="#">
+                                Full Directory
+                                <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-8">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-9">
+                                        <a class="test" tabindex="-1" href="#">
+                                Guns & Firearms
+                                <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-9">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-10">
+                                        <a class="test" tabindex="-1" href="#">
+                                Gun Parts
+                                <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-10">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-11">
+                                        <a class="test" tabindex="-1" href="#">
+                                Scopes, Sights & Optics
+                                <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-11">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-12">
+                                        <a class="test" tabindex="-1" href="#">
+                                Full Directory
+                                <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-12">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-13">
+                                        <a class="test" tabindex="-1" href="#">
+                                Guns & Firearms
+                                <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-13">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-14">
+                                        <a class="test" tabindex="-1" href="#">
+                                Gun Parts
+                                <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-14">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-15">
+                                        <a class="test" tabindex="-1" href="#">
+                                Scopes, Sights & Optics
+                                <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-15">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-16">
+                                        <a class="test" tabindex="-1" href="#">
+                                Fishing Tackle
+                                <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-16">
+                                            <li><a tabindex="-1" href="#">All Fishing Tackle</a></li>
+                                            <li class="dropdown-submenu dropdown-submenu-17">
+                                                <a class="test" tabindex="-1" href="#">
+                                        Fly Fishing Tackle
+                                        <span><i class="fas fa-caret-right"></i></span></a>
+                                                <ul class="drop-submenu-17">
+                                                    <li><a tabindex="-1" href="#">All Fishing Tackle</a></li>
+                                                    <li><a tabindex="-1" href="#">Fly Fishing Flies</a></li>
+                                                    <li><a tabindex="-1" href="#">All Fishing Tackle</a></li>
+                                                    <li><a tabindex="-1" href="#">Fly Fishing Rod & Reel Combos</a></li>
+                                                    <li><a tabindex="-1" href="#">Fly Fishing Flies</a></li>
+                                                    <li><a tabindex="-1" href="#">All Fishing Tackle</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown-submenu dropdown-submenu-18">
+                                                <a class="test" tabindex="-1" href="#">
+                                        Freshwater Fishing Tackle
+                                        <span><i class="fas fa-caret-right"></i></span></a>
+                                                <ul class="drop-submenu-18">
+                                                    <li><a tabindex="-1" href="#">All Fishing Tackle</a></li>
+                                                    <li><a tabindex="-1" href="#">Fly Fishing Flies</a></li>
+                                                    <li><a tabindex="-1" href="#">All Fishing Tackle</a></li>
+                                                    <li><a tabindex="-1" href="#">Fly Fishing Rod & Reel Combos</a></li>
+                                                    <li><a tabindex="-1" href="#">Fly Fishing Flies</a></li>
+                                                    <li><a tabindex="-1" href="#">All Fishing Tackle</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown-submenu dropdown-submenu-19">
+                                                <a class="test" tabindex="-1" href="#">
+                                        All Fishing Tackle
+                                        <span><i class="fas fa-caret-right"></i></span></a>
+                                                <ul class="drop-submenu-19">
+                                                    <li><a tabindex="-1" href="#">All Fishing Tackle</a></li>
+                                                    <li><a tabindex="-1" href="#">Fly Fishing Flies</a></li>
+                                                    <li><a tabindex="-1" href="#">All Fishing Tackle</a></li>
+                                                    <li><a tabindex="-1" href="#">Fly Fishing Rod & Reel Combos</a></li>
+                                                    <li><a tabindex="-1" href="#">Fly Fishing Flies</a></li>
+                                                    <li><a tabindex="-1" href="#">All Fishing Tackle</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a tabindex="-1" href="#">Fly Fishing Tackle</a></li>
+                                            <li><a tabindex="-1" href="#">Fresh Water Fishing Tackle</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-20">
+                                        <a class="test" tabindex="-1" href="#">
+                                Gun Parts
+                                <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-20">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-21">
+                                        <a class="test" tabindex="-1" href="#">
+                                Scopes, Sights & Optics
+                                <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-21">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-22">
+                                        <a class="test" tabindex="-1" href="#">
+                                Full Directory
+                                <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-22">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-23">
+                                        <a class="test" tabindex="-1" href="#">
+                                Guns & Firearms
+                                <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-23">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropdown-submenu-24">
+                                        <a class="test" tabindex="-1" href="#">
+                                Gun Parts
+                                <span><i class="fas fa-caret-right"></i></span></a>
+                                        <ul class="drop-submenu-24">
+                                            <li><a tabindex="-1" href="#">Link 1</a></li>
+                                            <li><a tabindex="-1" href="#">Link 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a tabindex="-1" href="#">Scopes, Sights & Optics</a></li>
+                                    <li><a tabindex="-1" href="#">Full Directory</a></li>
+                                    <li><a tabindex="-1" href="#">Guns & Firearms</a></li>
+                                    <li><a tabindex="-1" href="#">Gun Parts</a></li>
+                                    <li><a tabindex="-1" href="#">Scopes, Sights & Optics</a></li>
+                                    <li><a tabindex="-1" href="#">Full Directory</a></li>
+                                    <li><a tabindex="-1" href="#">Guns & Firearms</a></li>
+                                    <li><a tabindex="-1" href="#">Gun Parts</a></li>
+                                    <li><a tabindex="-1" href="#">Scopes, Sights & Optics</a></li>
+                                    <li><a tabindex="-1" href="#">Full Directory</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Buying.html" target="_blank">Buy</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" target="_blank">Sell</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Coupon Center.html" target="_blank">Coupons</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Deals.html" target="_blank">Deals</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Gun Article.html" target="_blank">Articles</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Gun Video.html" target="_blank">Videos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" target="_blank">Help</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="banner-row row justify-content-between">
+                <div class="banner-slider col-md-8">
+                    <div class="banner owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="banner-slide">
+                                <img src="images/banner-slider.png" alt="Sniper">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="banner-slide">
+                                <img src="images/banner-slider.png" alt="Sniper">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="banner-slide">
+                                <img src="images/banner-slider.png" alt="Sniper">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="banner-slide">
+                                <img src="images/banner-slider.png" alt="Sniper">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-side-content col-md-4">
+                    <div class="shotgun-container">
+                        <div class="side-banner-overlay">
+                            <button class="btn-banner-side"><a href="#">Shotgun</a></button>
+                            <h5>Why do we use it?</h5>
+                            <p>Lorem Ipsum</p>
+                        </div>
+                    </div>
+                    <div class="ammo-container">
+                        <div class="side-banner-overlay">
+                            <button class="btn-banner-side"><a href="#">Ammo</a></button>
+                            <h5>Why do we use it?</h5>
+                            <p>Lorem Ipsum</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-bottom col-md-12">
+                    <div class="banner-bottom-row row jusify-content-between">
+                        <div class="firearms-col col-md-4">
+                            <div class="row justify-content-between">
+                                <div class="arm-img col-md-5">
+                                    <img src="images/Hero-firearms.png" alt="">
+                                </div>
+                                <div class="arm-content col-md-7">
+                                    <h4>FIREARMS</h4>
+                                    <p>Beretta 92 FS 15+1 9mm 4.9" Barrel + Safety & 3-Dot Sights....</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="firearms-col col-md-4">
+                            <div class="row justify-content-between">
+                                <div class="arm-img col-md-5">
+                                    <img src="images/pistol.png" alt="">
+                                </div>
+                                <div class="arm-content col-md-7">
+                                    <h4>HAND GUNS</h4>
+                                    <p>Beretta 92 FS 15+1 9mm 4.9" Barrel + Safety & 3-Dot Sights....</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="firearms-col col-md-4">
+                            <div class="row justify-content-between">
+                                <div class="arm-img col-md-5">
+                                    <img src="images/scope.png" alt="">
+                                </div>
+                                <div class="arm-content col-md-7">
+                                    <h4>GUN SCOPES</h4>
+                                    <p>Beretta 92 FS 15+1 9mm 4.9" Barrel + Safety & 3-Dot Sights....</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="items-section">
+        <div class="item-container">
+            <div class="inner-container container">
+                <div class="item-content">
+                    <div class="item-btn">
+                        <button class="item-btn"><a href="#">Showcase Items</a></button>
+                    </div>
+                    <div class="item-sec-row row justify-content-between">
+                        <div class="item-col-1 col-md-9">
+                            <!-- <div class="items owl-carousel owl-theme">
+                                <div class="item"> -->
+                            <div class="item-sec-row row justify-content-between">
+                                <div class="scitem-col scitem-col-1 col-md-4">
+                                    <div class="item-img">
+                                        <img src="images/item-col-1.png" alt="">
+                                    </div>
+                                    <div class="item-info">
+                                        <h6>Beretta 92 FS 15+1 9mm 4.9" Barrel + Safety & 3-Dot Sights....</h6>
+                                        <p>$598.00</p>
+                                        <button class="btn-cart"><a href="#">> ADD TO CART</a></button>
+                                    </div>
+                                </div>
+                                <!-- </div> -->
+                                <!-- <div class="item"> -->
+                                <div class="scitem-col scitem-col-2 col-md-4">
+                                    <div class="item-img">
+                                        <img src="images/item-col-2.png" alt="">
+                                    </div>
+                                    <div class="item-info">
+                                        <h6>Beretta 92 FS 15+1 9mm 4.9" Barrel + Safety & 3-Dot Sights....</h6>
+                                        <p>$598.00</p>
+                                        <button class="btn-cart"><a href="#">> ADD TO CART</a></button>
+                                    </div>
+                                </div>
+                                <!-- </div>
+                                <div class="item"> -->
+                                <div class="scitem-col scitem-col-3 col-md-4">
+                                    <div class="item-img">
+                                        <img src="images/item-col-3.png" alt="">
+                                    </div>
+                                    <div class="item-info">
+                                        <h6>Beretta 92 FS 15+1 9mm 4.9" Barrel + Safety & 3-Dot Sights....</h6>
+                                        <p>$598.00</p>
+                                        <button class="btn-cart"><a href="#">> ADD TO CART</a></button>
+                                    </div>
+                                </div>
+                                <!-- </div> -->
+                                <!-- </div> -->
+                                <!-- <div class="items owl-carousel owl-theme">
+                                <div class="item"> -->
+                                <div class="scitem-col scitem-col-4 col-md-4">
+                                    <div class="item-img">
+                                        <img src="images/item-col-4.png" alt="">
+                                    </div>
+                                    <div class="item-info">
+                                        <h6>Beretta 92 FS 15+1 9mm 4.9" Barrel + Safety & 3-Dot Sights....</h6>
+                                        <p>$598.00</p>
+                                        <button class="btn-cart"><a href="#">> ADD TO CART</a></button>
+                                    </div>
+                                </div>
+                                <!-- </div> -->
+                                <!-- <div class="item"> -->
+                                <div class="scitem-col scitem-col-5 col-md-4">
+                                    <div class="item-img">
+                                        <img src="images/item-col-5.png" alt="">
+                                    </div>
+                                    <div class="item-info">
+                                        <h6>Beretta 92 FS 15+1 9mm 4.9" Barrel + Safety & 3-Dot Sights....</h6>
+                                        <p>$598.00</p>
+                                        <button class="btn-cart"><a href="#">> ADD TO CART</a></button>
+                                    </div>
+                                </div>
+                                <!-- </div> -->
+                                <!-- <div class="item"> -->
+                                <div class="scitem-col scitem-col-6 col-md-4">
+                                    <div class="item-img">
+                                        <img src="images/item-col-6.png" alt="">
+                                    </div>
+                                    <div class="item-info">
+                                        <h6>Beretta 92 FS 15+1 9mm 4.9" Barrel + Safety & 3-Dot Sights....</h6>
+                                        <p>$598.00</p>
+                                        <button class="btn-cart"><a href="#">> ADD TO CART</a></button>
+                                    </div>
+                                </div>
+                                <!-- </div> -->
+                                <!-- </div> -->
+                                <!-- <div class="items owl-carousel owl-theme">
+                                <div class="item"> -->
+                                <div class="scitem-col scitem-col-7 col-md-4">
+                                    <div class="item-img">
+                                        <img src="images/item-col-7.png" alt="">
+                                    </div>
+                                    <div class="item-info">
+                                        <h6>Beretta 92 FS 15+1 9mm 4.9" Barrel + Safety & 3-Dot Sights....</h6>
+                                        <p>$598.00</p>
+                                        <button class="btn-cart"><a href="#">> ADD TO CART</a></button>
+                                    </div>
+                                </div>
+                                <!-- </div> -->
+                                <!-- <div class="item"> -->
+                                <div class="scitem-col scitem-col-8 col-md-4">
+                                    <div class="item-img">
+                                        <img src="images/item-col-8.png" alt="">
+                                    </div>
+                                    <div class="item-info">
+                                        <h6>Beretta 92 FS 15+1 9mm 4.9" Barrel + Safety & 3-Dot Sights....</h6>
+                                        <p>$598.00</p>
+                                        <button class="btn-cart"><a href="#">> ADD TO CART</a></button>
+                                    </div>
+                                </div>
+                                <!-- </div> -->
+                                <!-- <div class="item"> -->
+                                <div class="scitem-col scitem-col-9 col-md-4">
+                                    <div class="item-img">
+                                        <img src="images/item-col-9.png" alt="">
+                                    </div>
+                                    <div class="item-info">
+                                        <h6>Beretta 92 FS 15+1 9mm 4.9" Barrel + Safety & 3-Dot Sights....</h6>
+                                        <p>$598.00</p>
+                                        <button class="btn-cart"><a href="#">> ADD TO CART</a></button>
+                                    </div>
+                                </div>
+                                <!-- </div> -->
+                                <!-- </div> -->
+                                <!-- <div class="items owl-carousel owl-theme">
+                                <div class="item"> -->
+                                <div class="scitem-col scitem-col-10 col-md-4">
+                                    <div class="item-img">
+                                        <img src="images/item-col-10.png" alt="">
+                                    </div>
+                                    <div class="item-info">
+                                        <h6>Beretta 92 FS 15+1 9mm 4.9" Barrel + Safety & 3-Dot Sights....</h6>
+                                        <p>$598.00</p>
+                                        <button class="btn-cart"><a href="#">> ADD TO CART</a></button>
+                                    </div>
+                                </div>
+                                <!-- </div> -->
+                                <!-- <div class="item"> -->
+                                <div class="scitem-col scitem-col-11 col-md-4">
+                                    <div class="item-img">
+                                        <img src="images/item-col-11.png" alt="">
+                                    </div>
+                                    <div class="item-info">
+                                        <h6>Beretta 92 FS 15+1 9mm 4.9" Barrel + Safety & 3-Dot Sights....</h6>
+                                        <p>$598.00</p>
+                                        <button class="btn-cart"><a href="#">> ADD TO CART</a></button>
+                                    </div>
+                                </div>
+                                <!-- </div> -->
+                                <!-- <div class="item"> -->
+                                <div class="scitem-col scitem-col-12 col-md-4">
+                                    <div class="item-img">
+                                        <img src="images/item-col-12.png" alt="">
+                                    </div>
+                                    <div class="item-info">
+                                        <h6>Beretta 92 FS 15+1 9mm 4.9" Barrel + Safety & 3-Dot Sights....</h6>
+                                        <p>$598.00</p>
+                                        <button class="btn-cart"><a href="#">> ADD TO CART</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- </div> -->
+                            <!-- </div> -->
+                            <div class="pagination-container">
+                                <ul class="pagination">
+                                    <li class="page-item"><a class="page-link" href="#">Prev.</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item active"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">Last</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item-col-2 col-md-3">
+                            <div class="popular-item">
+                                <button class="pop-item-btn"><a href="#">POPULAR</a></button>
+                                <div class="pop-item pop-item-1">
+                                    <img src="images/pop-item-1.png" alt="">
+                                    <div class="pop-txt">
+                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                                    </div>
+                                </div>
+                                <div class="pop-item pop-item-2">
+                                    <img src="images/pop-item-2.png" alt="">
+                                    <div class="pop-txt">
+                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                                    </div>
+                                </div>
+                                <div class="pop-item pop-item-3">
+                                    <img src="images/pop-item-3.png" alt="">
+                                    <div class="pop-txt">
+                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about-us-section items-section">
+        <div class="about-us container">
+            <div class="about-inner">
+                <h2>What is GunBroker.com?</h2>
+                <p>Passionate about guns? GunBroker.com is the perfect place for you! GunBroker.com is a marketplace of gun enthusiasts dedicated to sharing our affinity for guns. Here you can buy guns online, find guns for sale online, discover new guns,
+                    and get information about guns. Think of GunBroker.com as your gun spot for all things guns. The GunBroker.com marketplace goes beyond guns for sale, and offers hunting gear, gun parts / accessories, collectibles, and much more. Buying
+                    your next gun online at the best price, have a gun for sale, or want to get educated about a gun? GunBroker.com is your marketplace. GunBroker.com believes in promoting responsible gun ownership. GunBroker.com gives you a safe, secure
+                    and transparent way to buy guns online and offer guns for sale online by strict adherence to gun ownership policies and regulations through licensed firearms dealers as transfer agents. Happy gun hunting on GunBroker.com!</p>
+            </div>
+        </div>
+    </section>
+    <section class="interest-section">
+        <div class="interest-container container">
+            <h2>Areas of Interest</h2>
+            <div class="intrst-row-1 row justify-content-between">
+                <div class="area-btn col-lg-2">
+                    <button class="btn-area"><a href="#">Articles</a></button>
+                </div>
+                <div class="area-btn col-lg-2">
+                    <button class="btn-area"><a href="#">Coupon Center</a></button>
+                </div>
+                <div class="area-btn col-lg-2">
+                    <button class="btn-area"><a href="#">Dealer Store</a></button>
+                </div>
+                <div class="area-btn col-lg-2">
+                    <button class="btn-area"><a href="#">Fees</a></button>
+                </div>
+                <div class="area-btn col-lg-2">
+                    <button class="btn-area"><a href="#">FFL/Dealer Services</a></button>
+                </div>
+                <div class="area-btn col-lg-2">
+                    <button class="btn-area"><a href="#">Find an FFL</a></button>
+                </div>
+            </div>
+            <div class="intrst-row-1 intrst-row-2 row justify-content-between">
+                <div class="area-btn col-lg-2">
+                    <button class="btn-area"><a href="#">Gold Deals</a></button>
+                </div>
+                <div class="area-btn col-lg-3">
+                    <button class="btn-area"><a href="#">Gold Membership Program</a></button>
+                </div>
+                <div class="area-btn col-lg-2">
+                    <button class="btn-area"><a href="#">Register</a></button>
+                </div>
+                <div class="area-btn col-lg-2">
+                    <button class="btn-area"><a href="#">Self-Service Advertising</a></button>
+                </div>
+                <div class="area-btn col-lg-2">
+                    <button class="btn-area"><a href="#">The GunBroker Store</a></button>
+                </div>
+                <div class="area-btn col-lg-1">
+                    <button class="btn-area"><a href="#">Videos</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="partner-section">
+        <div class="partner-container container">
+            <div class="partner-content">
+                <h2>Partners</h2>
+                <div class="partner-row row justify-content-between">
+                    <div class="partner-col-1 col-md-4">
+                        <div class="pcol-1">
+                            <img src="images/partner-1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="partner-col-1 col-md-4">
+                        <div class="pcol-1 pcol-2">
+                            <img src="images/partner-2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="partner-col-1 col-md-4">
+                        <div class="pcol-1 pcol-3">
+                            <img src="images/partner-3.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <section class="footer">
+            <div class="footer-container container">
+                <div class="footer-content">
+                    <div class="footer-row d-flex justify-content-between">
+                        <div class="footer-sec-1 footer-sec">
+                            <h5>HELP</h5>
+                            <ul>
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Register</a></li>
+                                <li><a href="#">Site Map</a></li>
+                                <li><a href="#">Support Page</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-sec-2 footer-sec">
+                            <h5>BUYERS</h5>
+                            <ul>
+                                <li><a href="#">Tools for Buyers</a></li>
+                                <li><a href="#">New Buyers</a></li>
+                                <li><a href="#">How To Buy</a></li>
+                                <li><a href="#">Buyer's Protection</a></li>
+                                <li><a href="#">Find An FFL</a></li>
+                                <li><a href="#">GunBroker.com Pricing Report</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-sec-3 footer-sec">
+                            <h5>SELLERS</h5>
+                            <ul>
+                                <li><a href="#">Tools for Sellers</a></li>
+                                <li><a href="#">New Sellers</a></li>
+                                <li><a href="#">How To Sell</a></li>
+                                <li><a href="#">Fees & Services</a></li>
+                                <li><a href="#">Join our FFL Network</a></li>
+                                <li><a href="#">FFL/Dealer Services</a></li>
+                                <li><a href="#">Dealer Store</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-sec-4 footer-sec">
+                            <h5>RELATED SITES</h5>
+                            <ul>
+                                <li><a href="#">ATF FFL EZ Check</a></li>
+                                <li><a href="#">FFL Unleashed</a></li>
+                                <li><a href="#">Forums</a></li>
+                                <li><a href="#">GetZone</a></li>
+                                <li><a href="#">Gun Genius</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-sec-5 footer-sec">
+                            <h5>AREAS OF INTEREST</h5>
+                            <ul>
+                                <li><a href="#">The GunBroker Store</a></li>
+                                <li><a href="#">Articles</a></li>
+                                <li><a href="#">Deals</a></li>
+                                <li><a href="#">Firearm Industry News</a></li>
+                                <li><a href="#">Gold Deals</a></li>
+                                <li><a href="#">Gold Membership</a></li>
+                                <li><a href="#">Videos</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-sec-6 footer-sec">
+                            <h5>INDUSTRY RELATIONS</h5>
+                            <ul>
+                                <li><a href="#">Advertise with Us</a></li>
+                                <li><a href="#">Investor and Media Relations</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <section class="footer-bar">
+        <div class="fbar-container container">
+            <div class="fbar-row row justify-content-between">
+                <div class="col-sm-6">
+                    <p>© 1999-2020 GunBroker.com, LLC. All rights reserved worldwide. (03 6.1.26.2058)</p>
+                </div>
+                <div class="col-sm-6 made-by">
+                    <p>Made with Love at Web Care Tec.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script>
+        $('.owl-carousel.banner').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                1000: {
+                    items: 1
+                }
+            }
+        })
+    </script>
+    <script>
+        $('.items.owl-carousel').owlCarousel({
+            loop: false,
+            margin: 10,
+            nav: false,
+            stagePadding: 20,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
